@@ -27,28 +27,125 @@ public class Plataforma extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btngraficar = new javax.swing.JButton();
+        cable2 = new javax.swing.JProgressBar();
+        luzapagada4 = new javax.swing.JLabel();
+        pila = new javax.swing.JButton();
+        cable11 = new javax.swing.JProgressBar();
+        luzapagada5 = new javax.swing.JLabel();
+        luzapagada6 = new javax.swing.JLabel();
+        cable14 = new javax.swing.JProgressBar();
+        cable8 = new javax.swing.JProgressBar();
+        cable9 = new javax.swing.JProgressBar();
+        cable10 = new javax.swing.JProgressBar();
+        cable = new javax.swing.JProgressBar();
+        cable5 = new javax.swing.JProgressBar();
+        cable6 = new javax.swing.JProgressBar();
+        cable7 = new javax.swing.JProgressBar();
+        cable3 = new javax.swing.JProgressBar();
+        cable4 = new javax.swing.JProgressBar();
+        cable12 = new javax.swing.JProgressBar();
+        cable13 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(655, 455));
+        getContentPane().setLayout(null);
 
-        btngraficar.setText("Graficar ecuación");
+        cable2.setBackground(new java.awt.Color(102, 102, 102));
+        cable2.setForeground(new java.awt.Color(255, 255, 0));
+        getContentPane().add(cable2);
+        cable2.setBounds(58, 53, 162, 6);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
-                .addComponent(btngraficar)
-                .addGap(160, 160, 160))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(btngraficar)
-                .addContainerGap(160, Short.MAX_VALUE))
-        );
+        luzapagada4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
+        getContentPane().add(luzapagada4);
+        luzapagada4.setBounds(180, 186, 72, 55);
+
+        pila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/pila.png"))); // NOI18N
+        pila.setBorderPainted(false);
+        pila.setContentAreaFilled(false);
+        pila.setFocusPainted(false);
+        getContentPane().add(pila);
+        pila.setBounds(12, 161, 96, 82);
+
+        cable11.setBackground(new java.awt.Color(102, 102, 102));
+        cable11.setForeground(new java.awt.Color(102, 102, 102));
+        getContentPane().add(cable11);
+        cable11.setBounds(54, 352, 165, 6);
+
+        luzapagada5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
+        getContentPane().add(luzapagada5);
+        luzapagada5.setBounds(548, 186, 72, 55);
+
+        luzapagada6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
+        getContentPane().add(luzapagada6);
+        luzapagada6.setBounds(385, 186, 72, 55);
+
+        cable14.setBackground(new java.awt.Color(102, 102, 102));
+        cable14.setForeground(new java.awt.Color(255, 255, 0));
+        cable14.setOrientation(1);
+        getContentPane().add(cable14);
+        cable14.setBounds(54, 248, 6, 101);
+
+        cable8.setBackground(new java.awt.Color(102, 102, 102));
+        cable8.setForeground(new java.awt.Color(102, 102, 102));
+        cable8.setOrientation(1);
+        getContentPane().add(cable8);
+        cable8.setBounds(213, 247, 6, 102);
+
+        cable9.setBackground(new java.awt.Color(102, 102, 102));
+        cable9.setForeground(new java.awt.Color(102, 102, 102));
+        cable9.setOrientation(1);
+        getContentPane().add(cable9);
+        cable9.setBounds(417, 247, 6, 102);
+
+        cable10.setBackground(new java.awt.Color(102, 102, 102));
+        cable10.setForeground(new java.awt.Color(102, 102, 102));
+        cable10.setOrientation(1);
+        getContentPane().add(cable10);
+        cable10.setBounds(580, 247, 6, 102);
+
+        cable.setBackground(new java.awt.Color(102, 102, 102));
+        cable.setForeground(new java.awt.Color(255, 255, 0));
+        cable.setOrientation(1);
+        getContentPane().add(cable);
+        cable.setBounds(58, 65, 6, 90);
+
+        cable5.setBackground(new java.awt.Color(102, 102, 102));
+        cable5.setForeground(new java.awt.Color(102, 102, 102));
+        cable5.setOrientation(1);
+        getContentPane().add(cable5);
+        cable5.setBounds(216, 65, 6, 115);
+
+        cable6.setBackground(new java.awt.Color(102, 102, 102));
+        cable6.setForeground(new java.awt.Color(102, 102, 102));
+        cable6.setOrientation(1);
+        getContentPane().add(cable6);
+        cable6.setBounds(418, 65, 6, 115);
+
+        cable7.setBackground(new java.awt.Color(102, 102, 102));
+        cable7.setForeground(new java.awt.Color(102, 102, 102));
+        cable7.setOrientation(1);
+        getContentPane().add(cable7);
+        cable7.setBounds(581, 65, 6, 115);
+
+        cable3.setBackground(new java.awt.Color(102, 102, 102));
+        cable3.setForeground(new java.awt.Color(255, 255, 0));
+        getContentPane().add(cable3);
+        cable3.setBounds(226, 53, 198, 6);
+
+        cable4.setBackground(new java.awt.Color(102, 102, 102));
+        cable4.setForeground(new java.awt.Color(255, 255, 0));
+        getContentPane().add(cable4);
+        cable4.setBounds(430, 53, 157, 6);
+
+        cable12.setBackground(new java.awt.Color(102, 102, 102));
+        cable12.setForeground(new java.awt.Color(102, 102, 102));
+        getContentPane().add(cable12);
+        cable12.setBounds(225, 352, 198, 6);
+
+        cable13.setBackground(new java.awt.Color(102, 102, 102));
+        cable13.setForeground(new java.awt.Color(102, 102, 102));
+        getContentPane().add(cable13);
+        cable13.setBounds(429, 352, 157, 6);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,6 +189,23 @@ public class Plataforma extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btngraficar;
+    public javax.swing.JProgressBar cable;
+    public javax.swing.JProgressBar cable10;
+    public javax.swing.JProgressBar cable11;
+    public javax.swing.JProgressBar cable12;
+    public javax.swing.JProgressBar cable13;
+    public javax.swing.JProgressBar cable14;
+    public javax.swing.JProgressBar cable2;
+    public javax.swing.JProgressBar cable3;
+    public javax.swing.JProgressBar cable4;
+    public javax.swing.JProgressBar cable5;
+    public javax.swing.JProgressBar cable6;
+    public javax.swing.JProgressBar cable7;
+    public javax.swing.JProgressBar cable8;
+    public javax.swing.JProgressBar cable9;
+    public javax.swing.JLabel luzapagada4;
+    public javax.swing.JLabel luzapagada5;
+    public javax.swing.JLabel luzapagada6;
+    public javax.swing.JButton pila;
     // End of variables declaration//GEN-END:variables
 }

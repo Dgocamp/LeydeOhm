@@ -20,14 +20,22 @@ public class Controlador {
     public Controlador(Plataforma p, Modelo m) {
         this.p = p;
         this.m = m;
-        graficar();
+        inicio();
     }
     
-    public void graficar(){
+    public void inicio(){
+        /*
         p.btngraficar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                  m.CargarGrafico();
+            }
+            
+        });*/
+        p.pila.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.encender();
             }
             
         });
