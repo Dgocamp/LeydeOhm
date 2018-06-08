@@ -28,11 +28,11 @@ public class Plataforma extends javax.swing.JFrame {
     private void initComponents() {
 
         cable2 = new javax.swing.JProgressBar();
-        luzapagada4 = new javax.swing.JLabel();
+        luz = new javax.swing.JLabel();
         pila = new javax.swing.JButton();
         cable11 = new javax.swing.JProgressBar();
-        luzapagada5 = new javax.swing.JLabel();
-        luzapagada6 = new javax.swing.JLabel();
+        luz3 = new javax.swing.JLabel();
+        luz2 = new javax.swing.JLabel();
         cable14 = new javax.swing.JProgressBar();
         cable8 = new javax.swing.JProgressBar();
         cable9 = new javax.swing.JProgressBar();
@@ -45,107 +45,183 @@ public class Plataforma extends javax.swing.JFrame {
         cable4 = new javax.swing.JProgressBar();
         cable12 = new javax.swing.JProgressBar();
         cable13 = new javax.swing.JProgressBar();
+        calcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(655, 455));
-        getContentPane().setLayout(null);
+        setResizable(false);
 
         cable2.setBackground(new java.awt.Color(102, 102, 102));
         cable2.setForeground(new java.awt.Color(255, 255, 0));
-        getContentPane().add(cable2);
-        cable2.setBounds(58, 53, 162, 6);
 
-        luzapagada4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
-        getContentPane().add(luzapagada4);
-        luzapagada4.setBounds(180, 186, 72, 55);
+        luz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
 
         pila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/pila.png"))); // NOI18N
         pila.setBorderPainted(false);
         pila.setContentAreaFilled(false);
+        pila.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pila.setFocusPainted(false);
-        getContentPane().add(pila);
-        pila.setBounds(12, 161, 96, 82);
 
         cable11.setBackground(new java.awt.Color(102, 102, 102));
         cable11.setForeground(new java.awt.Color(102, 102, 102));
-        getContentPane().add(cable11);
-        cable11.setBounds(54, 352, 165, 6);
 
-        luzapagada5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
-        getContentPane().add(luzapagada5);
-        luzapagada5.setBounds(548, 186, 72, 55);
+        luz3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
 
-        luzapagada6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
-        getContentPane().add(luzapagada6);
-        luzapagada6.setBounds(385, 186, 72, 55);
+        luz2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icono2.png"))); // NOI18N
 
         cable14.setBackground(new java.awt.Color(102, 102, 102));
         cable14.setForeground(new java.awt.Color(255, 255, 0));
         cable14.setOrientation(1);
-        getContentPane().add(cable14);
-        cable14.setBounds(54, 248, 6, 101);
 
         cable8.setBackground(new java.awt.Color(102, 102, 102));
         cable8.setForeground(new java.awt.Color(102, 102, 102));
         cable8.setOrientation(1);
-        getContentPane().add(cable8);
-        cable8.setBounds(213, 247, 6, 102);
 
         cable9.setBackground(new java.awt.Color(102, 102, 102));
         cable9.setForeground(new java.awt.Color(102, 102, 102));
         cable9.setOrientation(1);
-        getContentPane().add(cable9);
-        cable9.setBounds(417, 247, 6, 102);
 
         cable10.setBackground(new java.awt.Color(102, 102, 102));
         cable10.setForeground(new java.awt.Color(102, 102, 102));
         cable10.setOrientation(1);
-        getContentPane().add(cable10);
-        cable10.setBounds(580, 247, 6, 102);
 
         cable.setBackground(new java.awt.Color(102, 102, 102));
         cable.setForeground(new java.awt.Color(255, 255, 0));
         cable.setOrientation(1);
-        getContentPane().add(cable);
-        cable.setBounds(58, 65, 6, 90);
 
         cable5.setBackground(new java.awt.Color(102, 102, 102));
         cable5.setForeground(new java.awt.Color(102, 102, 102));
         cable5.setOrientation(1);
-        getContentPane().add(cable5);
-        cable5.setBounds(216, 65, 6, 115);
 
         cable6.setBackground(new java.awt.Color(102, 102, 102));
         cable6.setForeground(new java.awt.Color(102, 102, 102));
         cable6.setOrientation(1);
-        getContentPane().add(cable6);
-        cable6.setBounds(418, 65, 6, 115);
 
         cable7.setBackground(new java.awt.Color(102, 102, 102));
         cable7.setForeground(new java.awt.Color(102, 102, 102));
         cable7.setOrientation(1);
-        getContentPane().add(cable7);
-        cable7.setBounds(581, 65, 6, 115);
 
         cable3.setBackground(new java.awt.Color(102, 102, 102));
         cable3.setForeground(new java.awt.Color(255, 255, 0));
-        getContentPane().add(cable3);
-        cable3.setBounds(226, 53, 198, 6);
 
         cable4.setBackground(new java.awt.Color(102, 102, 102));
         cable4.setForeground(new java.awt.Color(255, 255, 0));
-        getContentPane().add(cable4);
-        cable4.setBounds(430, 53, 157, 6);
 
         cable12.setBackground(new java.awt.Color(102, 102, 102));
         cable12.setForeground(new java.awt.Color(102, 102, 102));
-        getContentPane().add(cable12);
-        cable12.setBounds(225, 352, 198, 6);
 
         cable13.setBackground(new java.awt.Color(102, 102, 102));
         cable13.setForeground(new java.awt.Color(102, 102, 102));
-        getContentPane().add(cable13);
-        cable13.setBounds(429, 352, 157, 6);
+
+        calcular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
+        calcular.setBorderPainted(false);
+        calcular.setContentAreaFilled(false);
+        calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        calcular.setFocusPainted(false);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(cable2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(cable3, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(cable4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(cable, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pila, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(cable5, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(luz))
+                        .addGap(133, 133, 133)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(cable6, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(luz2))
+                        .addGap(91, 91, 91)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(cable7, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(luz3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable14, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(153, 153, 153)
+                        .addComponent(cable8, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(198, 198, 198)
+                        .addComponent(cable9, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(157, 157, 157)
+                        .addComponent(cable10, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable11, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(cable12, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(cable13, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(calcular))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cable2, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable3, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable4, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(pila))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(luz, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(luz2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cable7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(luz3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(cable14, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cable8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable10, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cable11, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable12, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cable13, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(58, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(calcular)
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,9 +279,10 @@ public class Plataforma extends javax.swing.JFrame {
     public javax.swing.JProgressBar cable7;
     public javax.swing.JProgressBar cable8;
     public javax.swing.JProgressBar cable9;
-    public javax.swing.JLabel luzapagada4;
-    public javax.swing.JLabel luzapagada5;
-    public javax.swing.JLabel luzapagada6;
+    public javax.swing.JButton calcular;
+    public javax.swing.JLabel luz;
+    public javax.swing.JLabel luz2;
+    public javax.swing.JLabel luz3;
     public javax.swing.JButton pila;
     // End of variables declaration//GEN-END:variables
 }

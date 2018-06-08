@@ -7,6 +7,7 @@ package leydeohm;
 
 import controlador.Controlador;
 import modelo.Modelo;
+import vista.Calculadora;
 import vista.Plataforma;
 
 /**
@@ -21,8 +22,9 @@ public class LeyDeOhm {
     public static void main(String[] args) {
         // TODO code application logic here
         Plataforma p = new Plataforma();
-        Modelo m = new Modelo(p);
-        Controlador c = new Controlador(p,m);
+        Calculadora ca = new Calculadora();
+        Modelo m = new Modelo(p,ca);       
+        Controlador c = new Controlador(p,ca,m);
         p.setVisible(true);
     }
     
