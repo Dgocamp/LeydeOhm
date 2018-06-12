@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -28,16 +29,43 @@ public class Modelo implements Runnable{
     Plataforma p;
     Thread t;
     Calculadora ca;
+    
 
     public Modelo(Plataforma p, Calculadora ca) {
         this.p = p;
         this.ca = ca;
-    }
-
-    public void open(){
-        ca.setVisible(true);
+        ca.setLocationRelativeTo(null);
+        p.setTitle("Ley de Ohm - circuito en paralelo");
     }
     
+    boolean validar(){
+        if (ca.vtext.getText().isEmpty()||ca.rtext.getText().isEmpty()||ca.rtext1.getText().isEmpty()||ca.rtext2.getText().isEmpty()){
+            return true;
+        }else{
+            return false;
+        }      
+    }
+    boolean validar2(){
+        if (ca.vtext.getText().isEmpty()||ca.itext.getText().isEmpty()||ca.itext1.getText().isEmpty()||ca.itext2.getText().isEmpty()){
+            return true;
+        }else{
+            return false;
+        }      
+    }
+    public int i=1; //variable para la visibilidad de la calculadora
+    public void open(){
+        switch(i){
+            case 1:
+                ca.setVisible(true);
+                i=0;
+                break;
+            case 0:    
+                ca.dispose();
+                i=1;
+                break;
+        }    
+    }
+
     public void encender(){
         t=new Thread(this);
         t.start();
@@ -54,32 +82,50 @@ public class Modelo implements Runnable{
         ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 3 = "+in3+" A");
         ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad total = "+inTotal+" A");
         ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje total = "+volTotal+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 1 = Voltaje 2 = Voltaje 3");
     }
     public void operar(){
-        double r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal;
-        r1=Double.parseDouble(ca.rtext.getText());
-        r2=Double.parseDouble(ca.rtext1.getText());
-        r3=Double.parseDouble(ca.rtext2.getText());
-        volTotal=Double.parseDouble(ca.vtext.getText());
-        resTotal =1/((1/r1)+(1/r2)+(1/r3)); 
-        inTotal=volTotal/resTotal;   
-        in1=volTotal/r1;
-        in2=volTotal/r2;
-        in3=volTotal/r3;  
-        imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
+        if(validar()){
+            JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Resistencia", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }else{
+            double r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal;
+            r1=Double.parseDouble(ca.rtext.getText());
+            r2=Double.parseDouble(ca.rtext1.getText());
+            r3=Double.parseDouble(ca.rtext2.getText());
+            volTotal=Double.parseDouble(ca.vtext.getText());
+            resTotal =1/((1/r1)+(1/r2)+(1/r3)); 
+            inTotal=volTotal/resTotal;   
+            in1=volTotal/r1;
+            in2=volTotal/r2;
+            in3=volTotal/r3;  
+            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
+            ca.resultado2.setEnabled(false);
+        }     
     }
     public void operar2(){
-        double r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal;
-        in1=Double.parseDouble(ca.itext.getText());
-        in2=Double.parseDouble(ca.itext1.getText());
-        in3=Double.parseDouble(ca.itext2.getText());
-        volTotal=Double.parseDouble(ca.vtext.getText());
-        inTotal=in1+in2+in3;
-        resTotal=volTotal/inTotal;
-        r1=volTotal/in1;
-        r2=volTotal/in2;
-        r3=volTotal/in3; 
-        imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
+        if(validar2()){
+            JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Intensidad", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }else{
+            double r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal;
+            in1=Double.parseDouble(ca.itext.getText());
+            in2=Double.parseDouble(ca.itext1.getText());
+            in3=Double.parseDouble(ca.itext2.getText());
+            volTotal=Double.parseDouble(ca.vtext.getText());
+            inTotal=in1+in2+in3;
+            resTotal=volTotal/inTotal;
+            r1=volTotal/in1;
+            r2=volTotal/in2;
+            r3=volTotal/in3; 
+            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
+            ca.resultado.setEnabled(false);
+        }     
+    }
+    public void limpiar(){
+        ca.pizarra.setText("");
+        ca.resultado.setEnabled(true);
+        ca.resultado2.setEnabled(true);
     }
 
     /*public void CargarGrafico(){

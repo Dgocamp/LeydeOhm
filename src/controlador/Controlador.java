@@ -51,13 +51,33 @@ public class Controlador {
             }
             
         });
-        c.resultado.addActionListener(new ActionListener(){
+        c.calcu2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                 m.operar();
+                m.i=0;
+                 m.open();
             }
             
         });
+        c.resultado.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.operar();     
+            }            
+        });
+        c.resultado2.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.operar2();     
+            }            
+        });
+        c.limpiar.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.limpiar();     
+            }            
+        });
+  
     }
     
 }
