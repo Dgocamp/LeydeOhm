@@ -50,8 +50,14 @@ public class Calculadora extends javax.swing.JFrame {
         resultado2 = new javax.swing.JButton();
         limpiar = new javax.swing.JButton();
         calcu2 = new javax.swing.JButton();
+        vtext1 = new javax.swing.JTextField();
+        vtext2 = new javax.swing.JTextField();
+        resultado3 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(567, 427));
         setUndecorated(true);
         addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -63,144 +69,130 @@ public class Calculadora extends javax.swing.JFrame {
                 formMousePressed(evt);
             }
         });
+        getContentPane().setLayout(null);
 
         vtext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 vtextKeyTyped(evt);
             }
         });
+        getContentPane().add(vtext);
+        vtext.setBounds(97, 72, 48, 19);
 
         rtext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtextKeyTyped(evt);
             }
         });
+        getContentPane().add(rtext);
+        rtext.setBounds(97, 198, 48, 19);
 
         itext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itextKeyTyped(evt);
             }
         });
+        getContentPane().add(itext);
+        itext.setBounds(97, 135, 48, 19);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/v.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(37, 54, 48, 48);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/r.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(37, 186, 48, 48);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/i.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(37, 120, 48, 48);
 
         resultado.setText("=");
+        getContentPane().add(resultado);
+        resultado.setBounds(271, 195, 48, 25);
 
         pizarra.setColumns(20);
         pizarra.setRows(5);
         jScrollPane1.setViewportView(pizarra);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(37, 252, 280, 128);
 
         rtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtext1KeyTyped(evt);
             }
         });
+        getContentPane().add(rtext1);
+        rtext1.setBounds(151, 198, 48, 19);
 
         rtext2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtext2KeyTyped(evt);
             }
         });
+        getContentPane().add(rtext2);
+        rtext2.setBounds(205, 198, 48, 19);
 
         itext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itext1KeyTyped(evt);
             }
         });
+        getContentPane().add(itext1);
+        itext1.setBounds(151, 135, 48, 19);
 
         itext2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itext2KeyTyped(evt);
             }
         });
+        getContentPane().add(itext2);
+        itext2.setBounds(205, 135, 48, 19);
 
         resultado2.setText("=");
+        getContentPane().add(resultado2);
+        resultado2.setBounds(271, 132, 48, 25);
 
         limpiar.setText("Limpiar");
+        getContentPane().add(limpiar);
+        limpiar.setBounds(400, 270, 80, 25);
 
         calcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
         calcu2.setBorderPainted(false);
         calcu2.setContentAreaFilled(false);
         calcu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcu2.setFocusPainted(false);
+        getContentPane().add(calcu2);
+        calcu2.setBounds(410, 310, 68, 58);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(32, 32, 32)
-                        .addComponent(vtext, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(limpiar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rtext)
-                            .addComponent(rtext1)
-                            .addComponent(rtext2))
-                        .addGap(121, 121, 121)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(resultado2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(itext2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(itext, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(itext1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(calcu2)
-                        .addGap(98, 98, 98))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(vtext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(limpiar))))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rtext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(itext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rtext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(itext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rtext2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(itext2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addComponent(calcu2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(resultado)
-                            .addComponent(resultado2)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
+        vtext1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                vtext1KeyTyped(evt);
+            }
+        });
+        getContentPane().add(vtext1);
+        vtext1.setBounds(151, 72, 48, 19);
+
+        vtext2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                vtext2KeyTyped(evt);
+            }
+        });
+        getContentPane().add(vtext2);
+        vtext2.setBounds(205, 72, 48, 19);
+
+        resultado3.setText("=");
+        getContentPane().add(resultado3);
+        resultado3.setBounds(271, 69, 48, 25);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ohmsLawTriangle.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(350, 70, 170, 150);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 650, 430);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -259,6 +251,14 @@ public class Calculadora extends javax.swing.JFrame {
         validar(evt);
     }//GEN-LAST:event_itext2KeyTyped
 
+    private void vtext1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vtext1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_vtext1KeyTyped
+
+    private void vtext2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vtext2KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_vtext2KeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -302,14 +302,19 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JButton limpiar;
     public javax.swing.JTextArea pizarra;
     public javax.swing.JButton resultado;
     public javax.swing.JButton resultado2;
+    public javax.swing.JButton resultado3;
     public javax.swing.JTextField rtext;
     public javax.swing.JTextField rtext1;
     public javax.swing.JTextField rtext2;
     public javax.swing.JTextField vtext;
+    public javax.swing.JTextField vtext1;
+    public javax.swing.JTextField vtext2;
     // End of variables declaration//GEN-END:variables
 }
