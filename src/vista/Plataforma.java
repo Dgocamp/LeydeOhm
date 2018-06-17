@@ -202,7 +202,7 @@ public class Plataforma extends javax.swing.JFrame {
         calcular.setContentAreaFilled(false);
         calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcular.setFocusPainted(false);
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, -1, 80));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 60, 70));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -515,7 +515,7 @@ public class Plataforma extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         jLabel13.setPreferredSize(new java.awt.Dimension(686, 428));
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 430));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

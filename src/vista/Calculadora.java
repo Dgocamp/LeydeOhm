@@ -34,27 +34,44 @@ public class Calculadora extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         vtext = new javax.swing.JTextField();
         rtext = new javax.swing.JTextField();
         itext = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        resultado = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        pizarra = new javax.swing.JTextArea();
         rtext1 = new javax.swing.JTextField();
         rtext2 = new javax.swing.JTextField();
         itext1 = new javax.swing.JTextField();
         itext2 = new javax.swing.JTextField();
-        resultado2 = new javax.swing.JButton();
         limpiar = new javax.swing.JButton();
         calcu2 = new javax.swing.JButton();
         vtext1 = new javax.swing.JTextField();
         vtext2 = new javax.swing.JTextField();
-        resultado3 = new javax.swing.JButton();
+        Universal = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        opcion = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        pizarra = new javax.swing.JTextArea();
+        botonV = new javax.swing.JToggleButton();
+        botoni = new javax.swing.JToggleButton();
+        botonr = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(567, 427));
@@ -107,17 +124,6 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(37, 120, 48, 48);
 
-        resultado.setText("=");
-        getContentPane().add(resultado);
-        resultado.setBounds(271, 195, 48, 25);
-
-        pizarra.setColumns(20);
-        pizarra.setRows(5);
-        jScrollPane1.setViewportView(pizarra);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(37, 252, 280, 128);
-
         rtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtext1KeyTyped(evt);
@@ -150,13 +156,12 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(itext2);
         itext2.setBounds(205, 135, 48, 19);
 
-        resultado2.setText("=");
-        getContentPane().add(resultado2);
-        resultado2.setBounds(271, 132, 48, 25);
-
-        limpiar.setText("Limpiar");
+        limpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/blanco_1.png"))); // NOI18N
+        limpiar.setBorderPainted(false);
+        limpiar.setContentAreaFilled(false);
+        limpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(limpiar);
-        limpiar.setBounds(400, 270, 80, 25);
+        limpiar.setBounds(380, 260, 80, 120);
 
         calcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
         calcu2.setBorderPainted(false);
@@ -164,7 +169,7 @@ public class Calculadora extends javax.swing.JFrame {
         calcu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcu2.setFocusPainted(false);
         getContentPane().add(calcu2);
-        calcu2.setBounds(410, 310, 68, 58);
+        calcu2.setBounds(490, 360, 68, 58);
 
         vtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -182,13 +187,54 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(vtext2);
         vtext2.setBounds(205, 72, 48, 19);
 
-        resultado3.setText("=");
-        getContentPane().add(resultado3);
-        resultado3.setBounds(271, 69, 48, 25);
+        Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/igual.png"))); // NOI18N
+        Universal.setBorderPainted(false);
+        Universal.setContentAreaFilled(false);
+        Universal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Universal.setFocusPainted(false);
+        getContentPane().add(Universal);
+        Universal.setBounds(450, 130, 50, 70);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ohmsLawTriangle.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/adorno_1.png"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(350, 70, 170, 150);
+        jLabel5.setBounds(380, 40, 170, 170);
+
+        opcion.setForeground(new java.awt.Color(204, 0, 0));
+        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Circuito", "Serie", "Paralelo" }));
+        opcion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(opcion);
+        opcion.setBounds(416, 80, 90, 24);
+
+        pizarra.setColumns(20);
+        pizarra.setRows(5);
+        jScrollPane3.setViewportView(pizarra);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(90, 260, 270, 120);
+
+        botonV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
+        botonV.setBorderPainted(false);
+        botonV.setContentAreaFilled(false);
+        botonV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonV.setFocusPainted(false);
+        getContentPane().add(botonV);
+        botonV.setBounds(270, 60, 66, 42);
+
+        botoni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
+        botoni.setBorderPainted(false);
+        botoni.setContentAreaFilled(false);
+        botoni.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botoni.setFocusPainted(false);
+        getContentPane().add(botoni);
+        botoni.setBounds(270, 120, 66, 42);
+
+        botonr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
+        botonr.setBorderPainted(false);
+        botonr.setContentAreaFilled(false);
+        botonr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonr.setFocusPainted(false);
+        getContentPane().add(botonr);
+        botonr.setBounds(270, 190, 66, 42);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
@@ -253,10 +299,12 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void vtext1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vtext1KeyTyped
         // TODO add your handling code here:
+        validar(evt);
     }//GEN-LAST:event_vtext1KeyTyped
 
     private void vtext2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vtext2KeyTyped
         // TODO add your handling code here:
+        validar(evt);
     }//GEN-LAST:event_vtext2KeyTyped
 
     /**
@@ -295,6 +343,10 @@ public class Calculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton Universal;
+    public javax.swing.JToggleButton botonV;
+    public javax.swing.JToggleButton botoni;
+    public javax.swing.JToggleButton botonr;
     public javax.swing.JButton calcu2;
     public javax.swing.JTextField itext;
     public javax.swing.JTextField itext1;
@@ -304,12 +356,12 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
     public javax.swing.JButton limpiar;
+    public javax.swing.JComboBox<String> opcion;
     public javax.swing.JTextArea pizarra;
-    public javax.swing.JButton resultado;
-    public javax.swing.JButton resultado2;
-    public javax.swing.JButton resultado3;
     public javax.swing.JTextField rtext;
     public javax.swing.JTextField rtext1;
     public javax.swing.JTextField rtext2;

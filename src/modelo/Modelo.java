@@ -29,13 +29,13 @@ public class Modelo implements Runnable{
     Plataforma p;
     Thread t;
     Calculadora ca;
-    
 
     public Modelo(Plataforma p, Calculadora ca) {
         this.p = p;
         this.ca = ca;
         ca.setLocationRelativeTo(null);
-        p.setTitle("Ley de Ohm - circuito en paralelo");
+        p.setTitle("Ley de Ohm - Circuito en paralelo");
+        
     }
     
     boolean validar(){
@@ -54,6 +54,7 @@ public class Modelo implements Runnable{
     }
     public int i=1; //variable para la visibilidad de la calculadora
     public void open(){
+        
         switch(i){
             case 1:
                 ca.setVisible(true);
@@ -70,21 +71,8 @@ public class Modelo implements Runnable{
         t=new Thread(this);
         t.start();
     }
-    public void imprimir(double r1,double r2,double r3,double resTotal,double in1,double in2,double in3,double inTotal, 
-                         double volTotal){
-        
-        ca.pizarra.setText("Resistencia 1 = "+r1+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 2 = "+r2+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 3 = "+r3+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResitencia total = "+resTotal+" Ω");       
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 1 = "+in1+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 2 = "+in2+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 3 = "+in3+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad total = "+inTotal+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje total = "+volTotal+" V");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 1 = Voltaje 2 = Voltaje 3");
-    }
-    public void operar(){
+    
+    public void operarSerie(){
         if(validar()){
             JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Resistencia", "Error", JOptionPane.ERROR_MESSAGE);
 
@@ -99,11 +87,27 @@ public class Modelo implements Runnable{
             in1=volTotal/r1;
             in2=volTotal/r2;
             in3=volTotal/r3;  
-            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
-            ca.resultado2.setEnabled(false);
+            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
+          
         }     
     }
-    public void operar2(){
+    public void imprimir(double r1,double r2,double r3,double resTotal,double in1,double in2,double in3,double inTotal, 
+                         double v1,double v2,double v3,double volTotal){
+        
+        ca.pizarra.setText("Resistencia 1 = "+r1+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 2 = "+r2+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 3 = "+r3+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nResitencia total = "+resTotal+" Ω");       
+        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 1 = "+in1+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 2 = "+in2+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 3 = "+in3+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad total = "+inTotal+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 1 = "+v1+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 2 = "+v2+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 3 = "+v3+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje total = "+volTotal+" V");
+    }
+    public void operarSerie2(){
         if(validar2()){
             JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Intensidad", "Error", JOptionPane.ERROR_MESSAGE);
 
@@ -118,14 +122,13 @@ public class Modelo implements Runnable{
             r1=volTotal/in1;
             r2=volTotal/in2;
             r3=volTotal/in3; 
-            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal);
-            ca.resultado.setEnabled(false);
+            imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
+          
         }     
     }
     public void limpiar(){
         ca.pizarra.setText("");
-        ca.resultado.setEnabled(true);
-        ca.resultado2.setEnabled(true);
+        
     }
 
     /*public void CargarGrafico(){

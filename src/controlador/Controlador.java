@@ -7,8 +7,11 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import modelo.Modelo;
+import modelo.Modelo2;
+import modelo.procesos;
 import vista.Calculadora;
 import vista.Plataforma;
+import vista.Plataforma2;
 
 /**
  *
@@ -16,13 +19,19 @@ import vista.Plataforma;
  */
 public class Controlador {
     Plataforma p;
+    Plataforma2 p2;
     Calculadora c;
     Modelo m;
+    Modelo2 m2;
+    procesos pro;
 
-    public Controlador(Plataforma p, Calculadora c, Modelo m) {
+    public Controlador(Plataforma p,Plataforma2 p2, Calculadora c, Modelo m,Modelo2 m2,procesos pro) {
         this.p = p;
+        this.p2 = p2;
         this.c = c;
         this.m = m;
+        this.m2 = m2;
+        this.pro = pro;
         inicio();
     }
 
@@ -54,15 +63,21 @@ public class Controlador {
         c.calcu2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                m.i=0;
-                 m.open();
+                //m.i=0;
+                 m2.open();
             }
             
+        });
+        /*c.resultado.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.operar();     
+            }            
         });
         c.resultado.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                 m.operar();     
+                 m2.operar();     
             }            
         });
         c.resultado2.addActionListener(new ActionListener(){
@@ -71,10 +86,36 @@ public class Controlador {
                  m.operar2();     
             }            
         });
+        c.resultado2.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m2.operar2();     
+            }            
+        });*/
         c.limpiar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                  m.limpiar();     
+            }            
+        });
+        p2.calcular.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m2.open();
+            }
+            
+        });
+        p2.pila.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m2.encender();
+            }
+            
+        });
+        c.Universal.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pro.especificarTipo();    
             }            
         });
   
