@@ -24,35 +24,32 @@ public class procesos {
         this.m = m;
         this.m2 = m2;
     }
-    
-    public void validarSerie(){
-        if(ca.botonV.isSelected()&&ca.botonr.isSelected()){
-            m.operarSerie();
-        }
-        if(ca.botoni.isSelected()&&ca.botonV.isSelected()){
-            m.operarSerie2();
-        }
-   
-    }
-    public void validarParalelo(){
-        if(ca.botonV.isSelected()&&ca.botonr.isSelected()){
-            m.operarSerie();
-        }
-        if(ca.botoni.isSelected()&&ca.botonV.isSelected()){
-            m.operarSerie2();
-        }
-    }
-    
+
     public void especificarTipo(){
-        if(ca.opcion.getSelectedIndex()==0){
-            JOptionPane.showMessageDialog(null,"Especificar tipo de circuito","Información", JOptionPane.INFORMATION_MESSAGE);
+  
+        if(ca.opcSerie.getSelectedIndex()==1){
+            m2.operarSerie();
         }
-        if(ca.opcion.getSelectedIndex()==1){
-            validarSerie();
+        if(ca.opcSerie.getSelectedIndex()==2){
+            m2.operarSerie2();      
         }
-        if(ca.opcion.getSelectedIndex()==2){
-            validarParalelo();
-            
+        if(ca.opcSerie.getSelectedIndex()==3){
+            m2.operarSerie3(); 
+        }
+        if(ca.opcSerie.getSelectedIndex()==4){
+            m2.operarSerie4();       
+        }
+        if(ca.opcParalelo.getSelectedIndex()==1){
+            m.operarParalelo();
+        }
+        if(ca.opcParalelo.getSelectedIndex()==2){
+            m.operarParalelo2();      
+        }
+        if(ca.opcParalelo.getSelectedIndex()==3){
+            m.operarParalelo3(); 
+        }
+        if(ca.opcSerie.getSelectedIndex()==4){
+            m.operarParalelo4();       
         }
     }
     

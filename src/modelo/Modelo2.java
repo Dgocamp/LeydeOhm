@@ -23,7 +23,7 @@ public class Modelo2 implements Runnable{
     Plataforma2 p2;
     Thread t;
     Calculadora ca;
-    
+    private double r1,r2,r3,resTotal,inTotal,v1,v2,v3,volTotal;
     public Modelo2(Plataforma2 p2, Calculadora ca) {
         this.p2 = p2;
         this.ca = ca;
@@ -55,46 +55,45 @@ public class Modelo2 implements Runnable{
                     Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
     }
-    public void imprimir(double r1,double r2,double r3,double resTotal,double in1,double in2,double in3,double inTotal, 
-                         double v1,double v2,double v3,double volTotal){
-        
-        ca.pizarra.setText("Resistencia 1 = "+r1+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 2 = "+r2+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResistencia 3 = "+r3+" Ω");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nResitencia total = "+resTotal+" Ω");       
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 1 = "+in1+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 2 = "+in2+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad 3 = "+in3+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nIntensidad total = "+inTotal+" A");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 1 = "+v1+" V");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 2 = "+v2+" V");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje 3 = "+v3+" V");
-        ca.pizarra.setText(ca.pizarra.getText()+"\nVoltaje total = "+volTotal+" V");
-    }
+    
     boolean validar(){
-        if (ca.vtext.getText().isEmpty()||ca.rtext.getText().isEmpty()||ca.rtext1.getText().isEmpty()||ca.rtext2.getText().isEmpty()){
+        if(ca.vtotal.getText().isEmpty()||ca.rtext.getText().isEmpty()||ca.rtext1.getText().isEmpty()||ca.rtext2.getText().isEmpty()){
             return true;
         }else{
             return false;
         }      
     }
     boolean validar2(){
-        if (ca.vtext.getText().isEmpty()||ca.itext.getText().isEmpty()||ca.itext1.getText().isEmpty()||ca.itext2.getText().isEmpty()){
+        if(ca.itotal.getText().isEmpty()||ca.rtext.getText().isEmpty()||ca.rtext1.getText().isEmpty()||ca.rtext2.getText().isEmpty()){
             return true;
         }else{
             return false;
         }      
     }
-    public void operarParalelo(){
+    boolean validar3(){
+        if(ca.rtotal.getText().isEmpty()||ca.vtext.getText().isEmpty()||ca.vtext1.getText().isEmpty()||ca.vtext2.getText().isEmpty()){
+            return true;
+        }else{
+            return false;
+        }      
+    }
+    boolean validar4(){
+        if(ca.itotal.getText().isEmpty()||ca.vtext.getText().isEmpty()||ca.vtext1.getText().isEmpty()||ca.vtext2.getText().isEmpty()){
+            return true;
+        }else{
+            return false;
+        }      
+    }
+    public void operarSerie(){
         if(validar()){
-            JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Resistencia", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Completar Resistencia 1 2 3 - Voltaje total", "Error", JOptionPane.ERROR_MESSAGE);
 
         }else{
-            double r1,r2,r3,resTotal,inTotal,v1,v2,v3,volTotal;
+            
             r1=Double.parseDouble(ca.rtext.getText());
             r2=Double.parseDouble(ca.rtext1.getText());
             r3=Double.parseDouble(ca.rtext2.getText());
-            volTotal=Double.parseDouble(ca.vtext.getText());
+            volTotal=Double.parseDouble(ca.vtotal.getText());
             resTotal =r1+r2+r3; 
             inTotal=volTotal/resTotal;   
             v1=inTotal*r1;
@@ -104,24 +103,76 @@ public class Modelo2 implements Runnable{
            
         }     
     }
-    public void operarParalelo2(){
+    public void operarSerie2(){
         if(validar2()){
-            JOptionPane.showMessageDialog(null,"Completar campos Voltaje - Intensidad", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Completar Resistencia 1 2 3 - Intensidad total", "Error", JOptionPane.ERROR_MESSAGE);
 
         }else{
-            double r1,r2,r3,resTotal,inTotal,v1,v2,v3,volTotal;
+  
             r1=Double.parseDouble(ca.rtext.getText());
             r2=Double.parseDouble(ca.rtext1.getText());
             r3=Double.parseDouble(ca.rtext2.getText());
-            resTotal=r1+r2+r3;
+            inTotal=Double.parseDouble(ca.itotal.getText());
+            resTotal =r1+r2+r3; 
+            volTotal=inTotal*resTotal;
+            v1=inTotal*r1;
+            v2=inTotal*r2;
+            v3=inTotal*r3;
+            imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
+        }     
+    }
+    public void operarSerie3(){
+        if(validar3()){
+            JOptionPane.showMessageDialog(null,"Completar Voltaje 1 2 3 - Resistencia total", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }else{
+            
             v1=Double.parseDouble(ca.vtext.getText());
             v2=Double.parseDouble(ca.vtext1.getText());
             v3=Double.parseDouble(ca.vtext2.getText());
-            volTotal=v1+v2+v3;
+            resTotal=Double.parseDouble(ca.rtotal.getText());
+            volTotal =v1+v2+v3; 
             inTotal=volTotal/resTotal;
+            r1=v1/inTotal;
+            r2=v2/inTotal;
+            r3=v3/inTotal;
             imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
- 
         }     
+    }
+      public void operarSerie4(){
+        if(validar4()){
+            JOptionPane.showMessageDialog(null,"Completar Voltaje 1 2 3 - Intensidad total", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }else{
+      
+            v1=Double.parseDouble(ca.vtext.getText());
+            v2=Double.parseDouble(ca.vtext1.getText());
+            v3=Double.parseDouble(ca.vtext2.getText());
+            inTotal=Double.parseDouble(ca.itotal.getText());
+            volTotal =v1+v2+v3; 
+            resTotal=volTotal/inTotal;
+            r1=v1/inTotal;
+            r2=v2/inTotal;
+            r3=v3/inTotal;
+            imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
+        }     
+    }
+    public void imprimir(double r1,double r2,double r3,double resTotal,double in1,double in2,double in3,double inTotal, 
+                         double v1,double v2,double v3,double volTotal){
+        
+        ca.pizarra.setText(ca.pizarra.getText()+" Resistencia 1 = "+r1+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Resistencia 2 = "+r2+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Resistencia 3 = "+r3+" Ω");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Resitencia total = "+resTotal+" Ω");       
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Intensidad 1 = "+in1+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Intensidad 2 = "+in2+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Intensidad 3 = "+in3+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Intensidad total = "+inTotal+" A");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Voltaje 1 = "+v1+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Voltaje 2 = "+v2+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Voltaje 3 = "+v3+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n Voltaje total = "+volTotal+" V");
+        ca.pizarra.setText(ca.pizarra.getText()+"\n\n");
     }
     @Override
     public void run() {

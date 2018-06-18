@@ -52,12 +52,16 @@ public class Calculadora extends javax.swing.JFrame {
         vtext2 = new javax.swing.JTextField();
         Universal = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        opcion = new javax.swing.JComboBox<>();
+        opcSerie = new javax.swing.JComboBox<>();
+        opcParalelo = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         pizarra = new javax.swing.JTextArea();
-        botonV = new javax.swing.JToggleButton();
-        botoni = new javax.swing.JToggleButton();
-        botonr = new javax.swing.JToggleButton();
+        limpiarV = new javax.swing.JToggleButton();
+        limpiari = new javax.swing.JToggleButton();
+        limpiarr = new javax.swing.JToggleButton();
+        rtotal = new javax.swing.JTextField();
+        itotal = new javax.swing.JTextField();
+        vtotal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,24 +191,37 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(vtext2);
         vtext2.setBounds(205, 72, 48, 19);
 
-        Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/igual.png"))); // NOI18N
+        Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/equal.png"))); // NOI18N
         Universal.setBorderPainted(false);
         Universal.setContentAreaFilled(false);
         Universal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Universal.setFocusPainted(false);
         getContentPane().add(Universal);
-        Universal.setBounds(450, 130, 50, 70);
+        Universal.setBounds(440, 160, 110, 110);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/adorno_1.png"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(380, 40, 170, 170);
+        jLabel5.setBounds(430, 0, 140, 170);
 
-        opcion.setForeground(new java.awt.Color(204, 0, 0));
-        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Circuito", "Serie", "Paralelo" }));
-        opcion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(opcion);
-        opcion.setBounds(416, 80, 90, 24);
+        opcSerie.setForeground(new java.awt.Color(204, 0, 0));
+        opcSerie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " Serie ", " R 1 2 3, V t.", " R 1 2 3, I t.", " V 1 2 3, R t.", " V 1 2 3, I t. " }));
+        opcSerie.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        opcSerie.setFocusable(false);
+        opcSerie.setLightWeightPopupEnabled(false);
+        opcSerie.setRequestFocusEnabled(false);
+        getContentPane().add(opcSerie);
+        opcSerie.setBounds(470, 30, 80, 24);
 
+        opcParalelo.setForeground(new java.awt.Color(204, 0, 0));
+        opcParalelo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " Paralelo ", " R 1 2 3, V t.", " R 1 2 3, I t.", "  I 1 2 3, V t.", "  I 1 2 3, R t." }));
+        opcParalelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        opcParalelo.setFocusable(false);
+        opcParalelo.setLightWeightPopupEnabled(false);
+        opcParalelo.setRequestFocusEnabled(false);
+        getContentPane().add(opcParalelo);
+        opcParalelo.setBounds(470, 60, 80, 24);
+
+        pizarra.setEditable(false);
         pizarra.setColumns(20);
         pizarra.setRows(5);
         jScrollPane3.setViewportView(pizarra);
@@ -212,29 +229,35 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(90, 260, 270, 120);
 
-        botonV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
-        botonV.setBorderPainted(false);
-        botonV.setContentAreaFilled(false);
-        botonV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonV.setFocusPainted(false);
-        getContentPane().add(botonV);
-        botonV.setBounds(270, 60, 66, 42);
+        limpiarV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiarV.setBorderPainted(false);
+        limpiarV.setContentAreaFilled(false);
+        limpiarV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpiarV.setFocusPainted(false);
+        getContentPane().add(limpiarV);
+        limpiarV.setBounds(270, 50, 80, 60);
 
-        botoni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
-        botoni.setBorderPainted(false);
-        botoni.setContentAreaFilled(false);
-        botoni.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botoni.setFocusPainted(false);
-        getContentPane().add(botoni);
-        botoni.setBounds(270, 120, 66, 42);
+        limpiari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiari.setBorderPainted(false);
+        limpiari.setContentAreaFilled(false);
+        limpiari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpiari.setFocusPainted(false);
+        getContentPane().add(limpiari);
+        limpiari.setBounds(270, 120, 66, 42);
 
-        botonr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/carpeta.png"))); // NOI18N
-        botonr.setBorderPainted(false);
-        botonr.setContentAreaFilled(false);
-        botonr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonr.setFocusPainted(false);
-        getContentPane().add(botonr);
-        botonr.setBounds(270, 190, 66, 42);
+        limpiarr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiarr.setBorderPainted(false);
+        limpiarr.setContentAreaFilled(false);
+        limpiarr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpiarr.setFocusPainted(false);
+        getContentPane().add(limpiarr);
+        limpiarr.setBounds(270, 190, 66, 30);
+        getContentPane().add(rtotal);
+        rtotal.setBounds(350, 190, 40, 30);
+        getContentPane().add(itotal);
+        itotal.setBounds(350, 130, 40, 30);
+        getContentPane().add(vtotal);
+        vtotal.setBounds(350, 70, 40, 30);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
@@ -344,13 +367,11 @@ public class Calculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Universal;
-    public javax.swing.JToggleButton botonV;
-    public javax.swing.JToggleButton botoni;
-    public javax.swing.JToggleButton botonr;
     public javax.swing.JButton calcu2;
     public javax.swing.JTextField itext;
     public javax.swing.JTextField itext1;
     public javax.swing.JTextField itext2;
+    public javax.swing.JTextField itotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -360,13 +381,19 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     public javax.swing.JButton limpiar;
-    public javax.swing.JComboBox<String> opcion;
+    public javax.swing.JToggleButton limpiarV;
+    public javax.swing.JToggleButton limpiari;
+    public javax.swing.JToggleButton limpiarr;
+    public javax.swing.JComboBox<String> opcParalelo;
+    public javax.swing.JComboBox<String> opcSerie;
     public javax.swing.JTextArea pizarra;
     public javax.swing.JTextField rtext;
     public javax.swing.JTextField rtext1;
     public javax.swing.JTextField rtext2;
+    public javax.swing.JTextField rtotal;
     public javax.swing.JTextField vtext;
     public javax.swing.JTextField vtext1;
     public javax.swing.JTextField vtext2;
+    public javax.swing.JTextField vtotal;
     // End of variables declaration//GEN-END:variables
 }
