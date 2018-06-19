@@ -35,18 +35,8 @@ public class Modelo2 implements Runnable{
         t=new Thread(this);
         t.start();
     }
-    public int i=1; //variable para la visibilidad de la calculadora
-    public void open(){
-        switch(i){
-            case 1:
-                ca.setVisible(true);
-                i=0;
-                break;
-            case 0:    
-                ca.dispose();
-                i=1;
-                break;
-        }    
+    public void encenderCalculadora(){
+        ca.setVisible(true);
     }
     public void corriente(){
         try {
@@ -98,7 +88,9 @@ public class Modelo2 implements Runnable{
             inTotal=volTotal/resTotal;   
             v1=inTotal*r1;
             v2=inTotal*r2;
-            v3=inTotal*r3;  
+            v3=inTotal*r3;
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Serie\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: R1,R2,R3 y V total\n");
             imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
            
         }     
@@ -118,6 +110,8 @@ public class Modelo2 implements Runnable{
             v1=inTotal*r1;
             v2=inTotal*r2;
             v3=inTotal*r3;
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Serie\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: R1,R2,R3 y I total\n");
             imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
         }     
     }
@@ -136,6 +130,8 @@ public class Modelo2 implements Runnable{
             r1=v1/inTotal;
             r2=v2/inTotal;
             r3=v3/inTotal;
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Serie\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: V1,V2,V3 y R total\n");
             imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
         }     
     }
@@ -154,6 +150,8 @@ public class Modelo2 implements Runnable{
             r1=v1/inTotal;
             r2=v2/inTotal;
             r3=v3/inTotal;
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Serie\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: V1,V2,V3 y I total\n");
             imprimir(r1,r2,r3,resTotal,inTotal,inTotal,inTotal,inTotal,v1,v2,v3,volTotal);
         }     
     }

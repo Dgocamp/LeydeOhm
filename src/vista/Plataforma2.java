@@ -191,7 +191,7 @@ public class Plataforma2 extends javax.swing.JFrame {
         calcular.setContentAreaFilled(false);
         calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcular.setFocusPainted(false);
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 368, 60, 60));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 358, 80, 70));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 428));

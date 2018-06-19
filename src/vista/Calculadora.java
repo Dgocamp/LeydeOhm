@@ -47,7 +47,7 @@ public class Calculadora extends javax.swing.JFrame {
         itext1 = new javax.swing.JTextField();
         itext2 = new javax.swing.JTextField();
         limpiar = new javax.swing.JButton();
-        calcu2 = new javax.swing.JButton();
+        calculadora = new javax.swing.JButton();
         vtext1 = new javax.swing.JTextField();
         vtext2 = new javax.swing.JTextField();
         Universal = new javax.swing.JButton();
@@ -56,12 +56,12 @@ public class Calculadora extends javax.swing.JFrame {
         opcParalelo = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         pizarra = new javax.swing.JTextArea();
-        limpiarV = new javax.swing.JToggleButton();
-        limpiari = new javax.swing.JToggleButton();
-        limpiarr = new javax.swing.JToggleButton();
         rtotal = new javax.swing.JTextField();
         itotal = new javax.swing.JTextField();
         vtotal = new javax.swing.JTextField();
+        limpiarv = new javax.swing.JButton();
+        limpiari = new javax.swing.JButton();
+        limpiarr = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -167,13 +167,13 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(limpiar);
         limpiar.setBounds(380, 260, 80, 120);
 
-        calcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
-        calcu2.setBorderPainted(false);
-        calcu2.setContentAreaFilled(false);
-        calcu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        calcu2.setFocusPainted(false);
-        getContentPane().add(calcu2);
-        calcu2.setBounds(490, 360, 68, 58);
+        calculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
+        calculadora.setBorderPainted(false);
+        calculadora.setContentAreaFilled(false);
+        calculadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        calculadora.setFocusPainted(false);
+        getContentPane().add(calculadora);
+        calculadora.setBounds(490, 360, 68, 58);
 
         vtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -229,13 +229,37 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(90, 260, 270, 120);
 
-        limpiarV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
-        limpiarV.setBorderPainted(false);
-        limpiarV.setContentAreaFilled(false);
-        limpiarV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        limpiarV.setFocusPainted(false);
-        getContentPane().add(limpiarV);
-        limpiarV.setBounds(270, 50, 80, 60);
+        rtotal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rtotalKeyTyped(evt);
+            }
+        });
+        getContentPane().add(rtotal);
+        rtotal.setBounds(350, 190, 40, 30);
+
+        itotal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                itotalKeyTyped(evt);
+            }
+        });
+        getContentPane().add(itotal);
+        itotal.setBounds(350, 130, 40, 30);
+
+        vtotal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                vtotalKeyTyped(evt);
+            }
+        });
+        getContentPane().add(vtotal);
+        vtotal.setBounds(350, 70, 40, 30);
+
+        limpiarv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiarv.setBorderPainted(false);
+        limpiarv.setContentAreaFilled(false);
+        limpiarv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpiarv.setFocusPainted(false);
+        getContentPane().add(limpiarv);
+        limpiarv.setBounds(260, 70, 66, 42);
 
         limpiari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
         limpiari.setBorderPainted(false);
@@ -243,7 +267,7 @@ public class Calculadora extends javax.swing.JFrame {
         limpiari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiari.setFocusPainted(false);
         getContentPane().add(limpiari);
-        limpiari.setBounds(270, 120, 66, 42);
+        limpiari.setBounds(260, 130, 66, 42);
 
         limpiarr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
         limpiarr.setBorderPainted(false);
@@ -251,13 +275,7 @@ public class Calculadora extends javax.swing.JFrame {
         limpiarr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiarr.setFocusPainted(false);
         getContentPane().add(limpiarr);
-        limpiarr.setBounds(270, 190, 66, 30);
-        getContentPane().add(rtotal);
-        rtotal.setBounds(350, 190, 40, 30);
-        getContentPane().add(itotal);
-        itotal.setBounds(350, 130, 40, 30);
-        getContentPane().add(vtotal);
-        vtotal.setBounds(350, 70, 40, 30);
+        limpiarr.setBounds(260, 190, 66, 42);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
@@ -330,6 +348,21 @@ public class Calculadora extends javax.swing.JFrame {
         validar(evt);
     }//GEN-LAST:event_vtext2KeyTyped
 
+    private void vtotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vtotalKeyTyped
+        // TODO add your handling code here:
+        validar(evt);
+    }//GEN-LAST:event_vtotalKeyTyped
+
+    private void itotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_itotalKeyTyped
+        // TODO add your handling code here:
+        validar(evt);
+    }//GEN-LAST:event_itotalKeyTyped
+
+    private void rtotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rtotalKeyTyped
+        // TODO add your handling code here:
+        validar(evt);
+    }//GEN-LAST:event_rtotalKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -367,7 +400,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Universal;
-    public javax.swing.JButton calcu2;
+    public javax.swing.JButton calculadora;
     public javax.swing.JTextField itext;
     public javax.swing.JTextField itext1;
     public javax.swing.JTextField itext2;
@@ -381,9 +414,9 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     public javax.swing.JButton limpiar;
-    public javax.swing.JToggleButton limpiarV;
-    public javax.swing.JToggleButton limpiari;
-    public javax.swing.JToggleButton limpiarr;
+    public javax.swing.JButton limpiari;
+    public javax.swing.JButton limpiarr;
+    public javax.swing.JButton limpiarv;
     public javax.swing.JComboBox<String> opcParalelo;
     public javax.swing.JComboBox<String> opcSerie;
     public javax.swing.JTextArea pizarra;

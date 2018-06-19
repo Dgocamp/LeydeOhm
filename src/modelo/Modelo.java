@@ -66,19 +66,8 @@ public class Modelo implements Runnable{
             return false;
         }      
     }
-    public int i=1; //variable para la visibilidad de la calculadora
-    public void open(){
-        
-        switch(i){
-            case 1:
-                ca.setVisible(true);
-                i=0;
-                break;
-            case 0:    
-                ca.dispose();
-                i=1;
-                break;
-        }    
+    public void encenderCalculadora(){
+        ca.setVisible(true);
     }
 
     public void encender(){
@@ -119,6 +108,8 @@ public class Modelo implements Runnable{
             in1=volTotal/r1;
             in2=volTotal/r2;
             in3=volTotal/r3;  
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Paralelo\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: R1,R2,R3 y V total\n");
             imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
           
         }     
@@ -136,7 +127,9 @@ public class Modelo implements Runnable{
             volTotal=inTotal*resTotal;   
             in1=volTotal/r1;
             in2=volTotal/r2;
-            in3=volTotal/r3;  
+            in3=volTotal/r3; 
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Paralelo\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: R1,R2,R3 y I total\n");
             imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
           
         }     
@@ -155,6 +148,8 @@ public class Modelo implements Runnable{
             r1=volTotal/in1;
             r2=volTotal/in2;
             r3=volTotal/in3; 
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Paralelo\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: I1,I2,I3 y V total\n");
             imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
           
         }     
@@ -173,6 +168,8 @@ public class Modelo implements Runnable{
             r1=volTotal/in1;
             r2=volTotal/in2;
             r3=volTotal/in3; 
+            ca.pizarra.setText(ca.pizarra.getText()+" Tipo de circuito: Paralelo\n");
+            ca.pizarra.setText(ca.pizarra.getText()+" Valores otorgados: I1,I2,I3 y R total\n");
             imprimir(r1,r2,r3,resTotal,in1,in2,in3,inTotal,volTotal,volTotal,volTotal,volTotal);
           
         }     

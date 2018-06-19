@@ -38,14 +38,7 @@ public class Controlador {
    
     
     public void inicio(){
-        /*
-        p.btngraficar.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m.CargarGrafico();
-            }
-            
-        });*/
+
         p.pila.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -56,55 +49,11 @@ public class Controlador {
         p.calcular.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                 m.open();
+                 m.encenderCalculadora();
             }
             
         });
-        c.calcu2.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //m.i=0;
-                 m2.open();
-            }
-            
-        });
-        /*c.resultado.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m.operar();     
-            }            
-        });
-        c.resultado.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m2.operar();     
-            }            
-        });
-        c.resultado2.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m.operar2();     
-            }            
-        });
-        c.resultado2.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m2.operar2();     
-            }            
-        });*/
-        c.limpiar.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m.limpiar();     
-            }            
-        });
-        p2.calcular.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 m2.open();
-            }
-            
-        });
+        
         p2.pila.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,10 +61,51 @@ public class Controlador {
             }
             
         });
+        p2.calcular.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m2.encenderCalculadora();
+            }
+            
+        });
+        
+        
+        c.limpiar.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.limpiar();     
+            }            
+        });
+  
+        
+        c.calculadora.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pro.cerrarCalculadora();  
+            }            
+        });
         c.Universal.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 pro.especificarTipo();    
+            }            
+        });
+        c.limpiarv.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pro.vlimpiar();    
+            }            
+        });
+        c.limpiari.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pro.ilimpiar();    
+            }            
+        });
+        c.limpiarr.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pro.rlimpiar();    
             }            
         });
   
