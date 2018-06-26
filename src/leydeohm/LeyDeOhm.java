@@ -33,7 +33,7 @@ public class LeyDeOhm {
         procesos pro = new procesos(ca,m,m2);
         Controlador c = new Controlador(p,p2,ca,m,m2,pro);
         p.setVisible(true);
-        p2.setVisible(true);
+        //p2.setVisible(true);
     }
     
 }
