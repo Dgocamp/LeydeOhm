@@ -31,7 +31,7 @@ public class LeyDeOhm {
         Modelo2 m2 = new Modelo2(p2,ca); 
         procesos pro = new procesos(ca,m,m2);
         Controlador c = new Controlador(p,p2,ca,m,m2,pro);
-
+        System.out.println("Rama para editar sin miedo [Diego]");
     }
     
 }
