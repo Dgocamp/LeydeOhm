@@ -33,10 +33,7 @@ public class LeyDeOhm {
         Controlador c = new Controlador(p,p2,ca,m,m2,pro);
         p.setVisible(true);
         p2.setVisible(true);
-        System.out.println("Software sobre la Ley de Ohm");
-        System.out.println("agregación de escritura");
-        System.out.println("Cambios importante");
-        System.out.println("Cambio en master");
+        
     }
     
 }
