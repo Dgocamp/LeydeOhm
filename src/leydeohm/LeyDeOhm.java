@@ -34,6 +34,7 @@ public class LeyDeOhm {
         p.setVisible(true);
         p2.setVisible(true);
         System.out.println("Software sobre la Ley de Ohm");
+        System.out.println("agregación de escritura");
     }
     
 }
