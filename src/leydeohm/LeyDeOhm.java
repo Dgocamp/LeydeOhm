@@ -32,7 +32,7 @@ public class LeyDeOhm {
         procesos pro = new procesos(ca,m,m2);
         Controlador c = new Controlador(p,p2,ca,m,m2,pro);
         System.out.println("Rama para editar sin miedo [Diego]");
-        System.out.println("Primera prueba en github");
+        System.out.println("Segunda prueba en github");
     }
     
 }
