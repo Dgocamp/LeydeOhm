@@ -33,7 +33,7 @@ public class LeyDeOhm {
         Controlador c = new Controlador(p,p2,ca,m,m2,pro);
         p.setVisible(true);
         p2.setVisible(true);
-        System.out.println("Software Ley de Ohm");
+        System.out.println("Software LDH");
         
     }
     
