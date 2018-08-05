@@ -50,7 +50,6 @@ public class Calculadora extends javax.swing.JFrame {
         calculadora = new javax.swing.JButton();
         vtext1 = new javax.swing.JTextField();
         vtext2 = new javax.swing.JTextField();
-        Universal = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         opcSerie = new javax.swing.JComboBox<>();
         opcParalelo = new javax.swing.JComboBox<>();
@@ -62,6 +61,7 @@ public class Calculadora extends javax.swing.JFrame {
         limpiarv = new javax.swing.JButton();
         limpiari = new javax.swing.JButton();
         limpiarr = new javax.swing.JButton();
+        Universal = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -191,14 +191,6 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(vtext2);
         vtext2.setBounds(205, 72, 48, 19);
 
-        Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/equal.png"))); // NOI18N
-        Universal.setBorderPainted(false);
-        Universal.setContentAreaFilled(false);
-        Universal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Universal.setFocusPainted(false);
-        getContentPane().add(Universal);
-        Universal.setBounds(440, 160, 110, 110);
-
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/adorno_1.png"))); // NOI18N
         getContentPane().add(jLabel5);
         jLabel5.setBounds(430, 0, 140, 170);
@@ -276,6 +268,14 @@ public class Calculadora extends javax.swing.JFrame {
         limpiarr.setFocusPainted(false);
         getContentPane().add(limpiarr);
         limpiarr.setBounds(260, 190, 66, 42);
+
+        Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/igual.png"))); // NOI18N
+        Universal.setBorderPainted(false);
+        Universal.setContentAreaFilled(false);
+        Universal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Universal.setFocusPainted(false);
+        getContentPane().add(Universal);
+        Universal.setBounds(440, 170, 110, 90);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
