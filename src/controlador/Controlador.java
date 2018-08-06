@@ -12,6 +12,7 @@ import modelo.procesos;
 import vista.Calculadora;
 import vista.Plataforma;
 import vista.Plataforma2;
+import vista.Welcome;
 
 /**
  *
@@ -24,14 +25,16 @@ public class Controlador {
     Modelo m;
     Modelo2 m2;
     procesos pro;
+    Welcome w;
 
-    public Controlador(Plataforma p,Plataforma2 p2, Calculadora c, Modelo m,Modelo2 m2,procesos pro) {
+    public Controlador(Plataforma p,Plataforma2 p2, Calculadora c, Modelo m,Modelo2 m2,procesos pro,Welcome w) {
         this.p = p;
         this.p2 = p2;
         this.c = c;
         this.m = m;
         this.m2 = m2;
         this.pro = pro;
+        this.w = w;
         inicio();
     }
 
@@ -50,6 +53,20 @@ public class Controlador {
             @Override
             public void actionPerformed(ActionEvent e) {
                  m.encenderCalculadora();
+            }
+            
+        });
+        w.wparalelo.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m.abrirPlataforma();
+            }
+            
+        });
+        w.wserie.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 m2.abrirPlataforma2();
             }
             
         });

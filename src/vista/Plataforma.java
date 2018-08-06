@@ -113,7 +113,7 @@ public class Plataforma extends javax.swing.JFrame {
         jLabel70 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -125,11 +125,12 @@ public class Plataforma extends javax.swing.JFrame {
         getContentPane().add(luz, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 186, -1, 55));
 
         pila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/pila.png"))); // NOI18N
+        pila.setToolTipText("Encender");
         pila.setBorderPainted(false);
         pila.setContentAreaFilled(false);
         pila.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pila.setFocusPainted(false);
-        getContentPane().add(pila, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 161, 96, -1));
+        getContentPane().add(pila, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 50, -1));
 
         cable11.setBackground(new java.awt.Color(102, 102, 102));
         cable11.setForeground(new java.awt.Color(102, 102, 102));
@@ -198,11 +199,12 @@ public class Plataforma extends javax.swing.JFrame {
         getContentPane().add(cable13, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 352, 157, 6));
 
         calcular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
+        calcular.setToolTipText("Calculadora");
         calcular.setBorderPainted(false);
         calcular.setContentAreaFilled(false);
         calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcular.setFocusPainted(false);
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 60, 70));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 40, 40));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

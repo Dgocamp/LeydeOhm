@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import vista.Calculadora;
 import vista.Plataforma;
 import vista.Plataforma2;
+import vista.Welcome;
 
 /**
  *
@@ -18,11 +19,13 @@ public class procesos {
     Calculadora ca;
     Modelo m;
     Modelo2 m2;
-
-    public procesos(Calculadora ca, Modelo m, Modelo2 m2) {
+    Welcome w;
+    public procesos(Calculadora ca, Modelo m, Modelo2 m2,Welcome w) {
         this.ca = ca;
         this.m = m;
         this.m2 = m2;
+        this.w = w;
+        w.setTitle("Software Ley de Ohm - Física II");
     }
     public void vlimpiar(){
         ca.vtext.setText("");

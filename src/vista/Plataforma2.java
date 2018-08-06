@@ -58,16 +58,17 @@ public class Plataforma2 extends javax.swing.JFrame {
         calcular = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/pila.png"))); // NOI18N
+        pila.setToolTipText("Encender");
         pila.setBorderPainted(false);
         pila.setContentAreaFilled(false);
         pila.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pila.setFocusPainted(false);
-        getContentPane().add(pila, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 184, 96, -1));
+        getContentPane().add(pila, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 50, -1));
 
         cable1.setBackground(new java.awt.Color(102, 102, 102));
         cable1.setForeground(new java.awt.Color(255, 255, 0));
@@ -187,11 +188,12 @@ public class Plataforma2 extends javax.swing.JFrame {
         getContentPane().add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 30, 40));
 
         calcular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
+        calcular.setToolTipText("Calculadora");
         calcular.setBorderPainted(false);
         calcular.setContentAreaFilled(false);
         calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcular.setFocusPainted(false);
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 358, 80, 70));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 40, 40));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 428));

@@ -31,6 +31,9 @@ public class Modelo2 implements Runnable{
         p2.setTitle("Ley de Ohm - Circuito en serie");
         
     }
+    public void abrirPlataforma2(){
+        p2.setVisible(true);
+    }
     public void encender(){
         t=new Thread(this);
         t.start();

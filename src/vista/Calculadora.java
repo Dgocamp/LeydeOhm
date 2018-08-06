@@ -92,6 +92,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        vtext.setToolTipText("Voltaje 1");
         vtext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 vtextKeyTyped(evt);
@@ -100,6 +101,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(vtext);
         vtext.setBounds(97, 72, 48, 19);
 
+        rtext.setToolTipText("Resistencia 1");
         rtext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtextKeyTyped(evt);
@@ -108,6 +110,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(rtext);
         rtext.setBounds(97, 198, 48, 19);
 
+        itext.setToolTipText("Intensidad 1");
         itext.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itextKeyTyped(evt);
@@ -117,17 +120,21 @@ public class Calculadora extends javax.swing.JFrame {
         itext.setBounds(97, 135, 48, 19);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/v.png"))); // NOI18N
+        jLabel1.setToolTipText("Voltaje");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(37, 54, 48, 48);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/r.png"))); // NOI18N
+        jLabel2.setToolTipText("Resistencia");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(37, 186, 48, 48);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/i.png"))); // NOI18N
+        jLabel3.setToolTipText("Intensidad");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(37, 120, 48, 48);
 
+        rtext1.setToolTipText("Resistencia 2");
         rtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtext1KeyTyped(evt);
@@ -136,6 +143,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(rtext1);
         rtext1.setBounds(151, 198, 48, 19);
 
+        rtext2.setToolTipText("Resistencia 3");
         rtext2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtext2KeyTyped(evt);
@@ -144,6 +152,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(rtext2);
         rtext2.setBounds(205, 198, 48, 19);
 
+        itext1.setToolTipText("Intensidad 2");
         itext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itext1KeyTyped(evt);
@@ -152,6 +161,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(itext1);
         itext1.setBounds(151, 135, 48, 19);
 
+        itext2.setToolTipText("Intensidad 3");
         itext2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itext2KeyTyped(evt);
@@ -161,6 +171,7 @@ public class Calculadora extends javax.swing.JFrame {
         itext2.setBounds(205, 135, 48, 19);
 
         limpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/blanco_1.png"))); // NOI18N
+        limpiar.setToolTipText("Borrar pizarra");
         limpiar.setBorderPainted(false);
         limpiar.setContentAreaFilled(false);
         limpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -168,13 +179,15 @@ public class Calculadora extends javax.swing.JFrame {
         limpiar.setBounds(380, 260, 80, 120);
 
         calculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calc.png"))); // NOI18N
+        calculadora.setToolTipText("Ocultar");
         calculadora.setBorderPainted(false);
         calculadora.setContentAreaFilled(false);
         calculadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calculadora.setFocusPainted(false);
         getContentPane().add(calculadora);
-        calculadora.setBounds(490, 360, 68, 58);
+        calculadora.setBounds(510, 370, 40, 40);
 
+        vtext1.setToolTipText("Voltaje 2");
         vtext1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 vtext1KeyTyped(evt);
@@ -183,6 +196,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(vtext1);
         vtext1.setBounds(151, 72, 48, 19);
 
+        vtext2.setToolTipText("Voltaje 3");
         vtext2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 vtext2KeyTyped(evt);
@@ -221,6 +235,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(90, 260, 270, 120);
 
+        rtotal.setToolTipText("Resistencia total");
         rtotal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rtotalKeyTyped(evt);
@@ -229,6 +244,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(rtotal);
         rtotal.setBounds(350, 190, 40, 30);
 
+        itotal.setToolTipText("Intensidad total");
         itotal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 itotalKeyTyped(evt);
@@ -237,6 +253,7 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(itotal);
         itotal.setBounds(350, 130, 40, 30);
 
+        vtotal.setToolTipText("Voltaje total");
         vtotal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 vtotalKeyTyped(evt);
@@ -246,36 +263,40 @@ public class Calculadora extends javax.swing.JFrame {
         vtotal.setBounds(350, 70, 40, 30);
 
         limpiarv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiarv.setToolTipText("Borrar V");
         limpiarv.setBorderPainted(false);
         limpiarv.setContentAreaFilled(false);
         limpiarv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiarv.setFocusPainted(false);
         getContentPane().add(limpiarv);
-        limpiarv.setBounds(260, 70, 66, 42);
+        limpiarv.setBounds(286, 60, 30, 42);
 
         limpiari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiari.setToolTipText("Borrar I");
         limpiari.setBorderPainted(false);
         limpiari.setContentAreaFilled(false);
         limpiari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiari.setFocusPainted(false);
         getContentPane().add(limpiari);
-        limpiari.setBounds(260, 130, 66, 42);
+        limpiari.setBounds(286, 120, 30, 42);
 
         limpiarr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eraser_1200 .png"))); // NOI18N
+        limpiarr.setToolTipText("Borrar R");
         limpiarr.setBorderPainted(false);
         limpiarr.setContentAreaFilled(false);
         limpiarr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiarr.setFocusPainted(false);
         getContentPane().add(limpiarr);
-        limpiarr.setBounds(260, 190, 66, 42);
+        limpiarr.setBounds(286, 180, 30, 42);
 
         Universal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/igual.png"))); // NOI18N
+        Universal.setToolTipText("Resultado");
         Universal.setBorderPainted(false);
         Universal.setContentAreaFilled(false);
         Universal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Universal.setFocusPainted(false);
         getContentPane().add(Universal);
-        Universal.setBounds(440, 170, 110, 90);
+        Universal.setBounds(470, 200, 50, 50);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagen.jpg"))); // NOI18N
         getContentPane().add(jLabel4);

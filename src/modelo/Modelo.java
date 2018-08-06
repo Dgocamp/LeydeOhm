@@ -73,7 +73,7 @@ public class Modelo implements Runnable{
     public void encender(){
         t=new Thread(this);
         t.start();
-        System.out.println("caca");
+      
     }
  
     public void imprimir(double r1,double r2,double r3,double resTotal,double in1,double in2,double in3,double inTotal, 
@@ -194,7 +194,9 @@ public class Modelo implements Runnable{
         frame.pack();
         frame.setVisible(true);
     }*/
-    
+    public void abrirPlataforma(){
+        p.setVisible(true);
+    }
     public void corriente(){
         try {
                     Thread.sleep(1);
